@@ -43,7 +43,7 @@ window.addEventListener(
             operationCanvasCtx.translate(-operationCanvasElement.width, 0);
             drawCanvasCtx.scale(-1, 1);
             drawCanvasCtx.translate(-drawCanvasElement.width, 0);
-            drawCanvasCtx.lineWidth = 7;
+            drawCanvasCtx.lineWidth = 10;
             handCanvasCtx.scale(-1, 1);
             handCanvasCtx.translate(-handCanvasElement.width, 0);
         }
@@ -107,9 +107,9 @@ window.addEventListener(
             operationCanvasCtx.beginPath();
             operationCanvasCtx.arc(indexCoordinate.x, indexCoordinate.y, 10, 0, 2 * Math.PI, false);
             if (labelQueue.length === labelQueue.filter(label => label === 'index').length) {
-                operationCanvasCtx.fillStyle = 'rgba(50, 50, 50, 127)';
+                operationCanvasCtx.fillStyle = 'rgb(0, 0, 0)';
             } else {
-                operationCanvasCtx.fillStyle = 'rgba(127, 127, 127, 127)';
+                operationCanvasCtx.fillStyle = 'rgb(255, 255, 255, 255)';
             }
             operationCanvasCtx.fill();
             operationCanvasCtx.stroke();
@@ -159,11 +159,11 @@ window.addEventListener(
                         (colorRect.top < indexCoordinate.y) &&
                         (indexCoordinate.y < colorRect.bottom)) {
                         if (i === 0) {
-                            drawCanvasCtx.lineWidth = 2;
+                            drawCanvasCtx.lineWidth = 3;
                         } else if (i === 1) {
-                            drawCanvasCtx.lineWidth = 7;
+                            drawCanvasCtx.lineWidth = 10;
                         } else {
-                            drawCanvasCtx.lineWidth = 15;
+                            drawCanvasCtx.lineWidth = 25;
                         }
                     }
                 }
